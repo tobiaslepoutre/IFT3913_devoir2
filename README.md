@@ -2,10 +2,12 @@
 
 Pour executer:
 Donner les permission script Bash dans le terminal:
+
   1) chmod +x setup.sh
   2) ./setup.sh
      
 Executer le code:
+
   4) ./measure.sh
 
 
