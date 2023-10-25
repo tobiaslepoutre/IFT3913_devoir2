@@ -6,4 +6,6 @@ Donner les permission script Bash dans le terminal:
   2) ./setup.sh
 Executer le code:
   3) ./measure.sh
-  
+
+
+  CHECK LE RAPPORT PR VOIR LES 3 METRIQUES QU'IL RESTE À IMPLEMENTER.
