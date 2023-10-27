@@ -1,8 +1,8 @@
 # IFT3913_devoir2
 Le dossier metricsImplementations contient les fichier java pour les implementations des 6 metriques:
 
-TDRCalculator correspond à la métrique 6.\\
-TDSTCalculator correscpond à la métrique 5.\\
+TDRCalculator correspond à la métrique 6.<br>
+TDSTCalculator correscpond à la métrique 5.<br>
 
 Pour executer:
 Donner les permission script Bash dans le terminal:
