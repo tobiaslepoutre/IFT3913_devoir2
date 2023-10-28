@@ -88,7 +88,7 @@ public class CodeCoverageCalculator {
             if (testFile.exists()) {
                 try {
                     double coverage = calculateCoverage(sourceFile, testFile);
-                    System.out.println(sourceFile.getName() + " has a coverage of " + (coverage * 100) + "% by " + testName);
+                    System.out.println(sourceFile.getName() + " has a coverage of " + (coverage) + "% by " + testName);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
