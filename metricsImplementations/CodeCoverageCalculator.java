@@ -10,6 +10,9 @@ import java.util.List;
 
 public class CodeCoverageCalculator {
 
+    private static double totalCoverage = 0;
+    private static int totalFiles = 0;
+
     public static double calculateCoverage(File codeFile, File testFile) throws FileNotFoundException {
         CompilationUnit codeCU = parseJavaFile(codeFile);
         CompilationUnit testCU = parseJavaFile(testFile);
@@ -59,6 +62,10 @@ public class CodeCoverageCalculator {
                     if (testFile.exists()) {
                         try {
                             double coverage = calculateCoverage(sourceFile, testFile);
+                            if (coverage != coverage) { 
+                            	coverage = 0;}
+                            totalCoverage += coverage;
+                            totalFiles++;
                             System.out.println(sourceFile.getName() + " has a coverage of " + coverage + "% by " + testName);
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -73,8 +80,15 @@ public class CodeCoverageCalculator {
         File sourceDirectory = new File("src/jfreechart/src/main/java/org/jfree");
         File testDirectory = new File("src/jfreechart/src/test/java/org/jfree");
 
-
+        if (!sourceDirectory.isDirectory() || !testDirectory.isDirectory()) {
+            System.out.println("Veuillez fournir des répertoires valides.");
+            return;
+        }
 
         checkCoverageInDirectory(sourceDirectory, testDirectory);
+        
+        if (totalFiles > 0) {
+            System.out.println("\nMoyenne globale de la couverture: " + (totalCoverage / totalFiles) + "%");
+        }
     }
 }
