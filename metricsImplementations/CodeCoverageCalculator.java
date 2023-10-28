@@ -71,8 +71,8 @@ public class CodeCoverageCalculator {
     
     public static void main(String[] args) {
 
-        File sourceDirectory = new File("src/jfreechart/src/main/java/org/jfree/chart/title");
-        File testDirectory = new File("src/jfreechart/src/test/java/org/jfree/chart/title");
+        File sourceDirectory = new File("jfreechart/src/main/java/org/jfree/chart/title");
+        File testDirectory = new File("jfreechart/src/test/java/org/jfree/chart/title");
 
         if (!sourceDirectory.isDirectory() || !testDirectory.isDirectory()) {
             System.out.println("Veuillez fournir des répertoires valides." + testDirectory);
